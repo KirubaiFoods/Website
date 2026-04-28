@@ -54,21 +54,14 @@ export default function Header() {
 
           {/* LOGO + BRAND */}
           <Link href="/" className="flex items-center gap-2">
-            <div className="w-9 h-9 rounded-full overflow-hidden">
-              <img
-                src="/logo.jpg"
-                alt="logo"
-                className="w-full h-full object-cover scale-125"
-              />
-            </div>
-
-            <h1
-              className={`text-2xl font-bold ${
-                isHome ? "text-white" : "text-red-700"
-              }`}
-            >
-              Kirubai Masala
-            </h1>
+            <div className="flex items-center">
+  <img
+    src="/logo.png"
+    alt="Kirubai Logo"
+    className="h-10 w-auto object-contain"
+  />
+</div>
+            
           </Link>
 
           {/* Subtitle */}
