@@ -54,44 +54,17 @@ export default function Header() {
 
           {/* LOGO + BRAND */}
           <Link href="/" className="flex items-center gap-2">
-            <div className="flex items-center">
-  <img
-    src="/logo.png"
-    alt="Kirubai Logo"
-    className="h-10 w-auto object-contain"
-  />
-</div>
+            <img
+  src="/logo.png"
+  alt="Kirubai Logo"
+  className="h-14 w-auto object-contain bg-transparent"
+/>
             
           </Link>
 
-          {/* Subtitle */}
-          <p
-            className={`text-sm ${
-              isHome ? "text-gray-200" : "text-gray-600"
-            }`}
-          >
-            வீட்டு சமையலின் உண்மை ருசி
-          </p>
+         
 
-          {/* Translation toggle */}
-          <button
-            onClick={() => setShowTranslation(!showTranslation)}
-            className={`text-xs underline mt-1 w-fit ${
-              isHome ? "text-white" : "text-red-600"
-            }`}
-          >
-            {showTranslation ? "Hide Translation" : "See Translation"}
-          </button>
 
-          {showTranslation && (
-            <p
-              className={`text-xs italic mt-1 ${
-                isHome ? "text-gray-200" : "text-gray-600"
-              }`}
-            >
-              The True Taste of Homemade Cooking
-            </p>
-          )}
         </div>
 
         {/* RIGHT SIDE NAV */}
