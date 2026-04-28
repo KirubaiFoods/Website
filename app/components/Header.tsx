@@ -54,11 +54,13 @@ export default function Header() {
 
           {/* LOGO + BRAND */}
           <Link href="/" className="flex items-center gap-2">
-            <img
-  src="/logo.png"
-  alt="Kirubai Logo"
-  className="h-12 w-auto object-contain bg-transparent"
-/>
+            <div className="px-2 py-1 rounded-md bg-white/20 backdrop-blur-sm">
+  <img
+    src="/logo.png"
+    alt="Kirubai Logo"
+    className="h-12 w-auto object-contain drop-shadow-md"
+  />
+</div>
             
           </Link>
 
