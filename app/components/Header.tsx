@@ -57,7 +57,7 @@ export default function Header() {
             <img
   src="/logo.png"
   alt="Kirubai Logo"
-  className="h-14 w-auto object-contain bg-transparent"
+  className="h-12 w-auto object-contain bg-transparent"
 />
             
           </Link>
