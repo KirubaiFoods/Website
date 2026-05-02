@@ -47,20 +47,20 @@ export default function Header() {
           : "bg-white shadow-md border-b border-gray-100"
       }`}
     >
-      <div className="max-w-7xl mx-auto flex justify-between items-center px-6 py-5">
+      <div className="max-w-7xl mx-auto flex justify-between items-center px-4 md:px-6 py-4 md:py-5">
 
         {/* LEFT SIDE */}
         <div className="flex flex-col">
 
           {/* LOGO + BRAND */}
           <Link href="/" className="flex items-center gap-2">
-            <div className="px-2 py-1 rounded-md bg-white/20 backdrop-blur-sm">
+          
   <img
-    src="/logo.png"
-    alt="Kirubai Logo"
-    className="h-12 w-auto object-contain drop-shadow-md"
-  />
-</div>
+  src="/logo.png"
+  alt="Kirubai Logo"
+  className="h-28 md:h-[140px] w-auto object-contain -ml-3 md:-ml-5 -mt-5"
+/>
+
             
           </Link>
 
@@ -77,7 +77,7 @@ export default function Header() {
             <Link
               href="/"
               className={`${
-                isProducts ? "text-red-700" : "text-black"
+                isProducts ? "text-[#1f4d3a]" : "text-[#1f4d3a]"
               } hover:text-red-600 transition`}
             >
               Home
@@ -89,20 +89,20 @@ export default function Header() {
             href="/cart"
             className={`flex items-center gap-2 ${
               isHome
-                ? "text-white"
+                ? "text-[#1f4d3a]"
                 : isProducts
-                ? "text-red-700"
-                : "text-black"
+                ? "text-[#1f4d3a]"
+                : "text-[#1f4d3a]"
             } hover:text-red-600 transition`}
           >
             <ShoppingCart
               size={22}
               className={
                 isHome
-                  ? "text-white"
+                  ? "text-[#1f4d3a]"
                   : isProducts
-                  ? "text-red-700"
-                  : "text-black"
+                  ? "text-[#1f4d3a]"
+                  : "text-[#1f4d3a]"
               }
             />
             <span className="text-sm">({totalItems})</span>

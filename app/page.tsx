@@ -1,10 +1,10 @@
 "use client";
-
+import { Leaf, CookingPot, Flame } from "lucide-react";
 import { ChevronDown } from "lucide-react";
 import { Playfair_Display } from "next/font/google";
 import { useEffect, useState } from "react";
 import { Facebook, Instagram, Youtube, Phone } from "lucide-react";
-
+import Link from "next/link";
 const aboutFont = Playfair_Display({
   subsets: ["latin"],
   weight: ["400", "500", "600"],
@@ -25,85 +25,79 @@ export default function HomePage() {
     <main className="min-h-screen flex flex-col">
 
       {/* Hero */}
-      <section className="relative w-full min-h-screen flex items-center justify-center text-center text-white pt-0 overflow-hidden">
-  
-        {/* ✅ UPDATED BACKGROUND IMAGE WITH ZOOM */}
-        <img
-          src="/background.jpg"
-          alt="background"
-          className={`absolute inset-0 w-full h-full object-cover transition-transform duration-[4000ms] ease-in-out ${
-            zoom ? "scale-110" : "scale-100"
-          }`}
-        />
+      <section className="relative w-full min-h-screen flex items-center justify-center overflow-hidden">
 
-        {/* Dark overlay */}
-        <div className="absolute inset-0 bg-black/60"></div>
+  {/* BACKGROUND IMAGE */}
+  <div className="absolute inset-0 flex items-center justify-center -z-10 pointer-events-none">
+    <img
+      src="/spices-bg.jpg"
+      alt="spices background"
+      className="w-[60%] max-w-[700px] md:max-w-[500px] lg:max-w-[800px] h-auto object-contain opacity-90 animate-zoom-slow"
+    />
+  </div>
 
-        {/* Content */}
-        <div className="relative z-10 px-6 -mt-10">
-          <h1
-  className={`text-5xl md:text-7xl font-semibold tracking-wide leading-tight ${aboutFont.className}`}
+  {/* CONTENT */}
+  <div className="relative z-10 flex flex-col items-center justify-center text-center px-4">
+
+   <div className="flex flex-col items-center justify-center text-center gap-4">
+
+      <div className="flex items-center gap-3 justify-center">
+        <Flame className="text-[#1f4d3a] w-5 h-5 md:w-6 md:h-6" />
+        <span className="text-lg md:text-2xl text-[#1f4d3a]">Real Aroma</span>
+      </div>
+
+      <div className="flex items-center gap-3 justify-center">
+        <Leaf className="text-[#1f4d3a] w-5 h-5 md:w-6 md:h-6" />
+        <span className="text-lg md:text-2xl text-[#1f4d3a]">Organic</span>
+      </div>
+
+      <div className="flex items-center gap-3 justify-center">
+        <CookingPot className="text-[#1f4d3a] w-5 h-5 md:w-6 md:h-6" />
+        <span className="text-lg md:text-2xl text-[#1f4d3a]">Taste</span>
+      </div>
+
+      <Link
+  href="/trending"
+  className="bg-[#1f4d3a] text-white px-8 py-3 rounded-full 
+             transition duration-300 ease-in-out 
+             hover:bg-[#163a2c] hover:bg-red-600 transition hover:scale-105 hover:shadow-lg
+             active:scale-95 inline-block"
 >
-            Authentic Tamil Spice Blends
-          </h1>
+  Shop Now
+</Link>
 
-          <p className="text-lg md:text-xl mb-8">
-            Pure Ingredients. Traditional Recipes. Trusted Quality.
-          </p>
+    </div>
 
-          <a
-            href="/products"
-            className="bg-white text-red-700 px-8 py-3 rounded-full font-semibold hover:bg-gray-200 transition"
-          >
-            Shop Now
-          </a>
-
-          <a href="#about" className="flex justify-center mt-10 animate-bounce">
-            <ChevronDown size={32} className="text-white opacity-80" />
-          </a>
-        </div>
-      </section>
+  </div>
+</section>
 
       {/* About Section */}
       <section
   id="about"
-  className="relative w-full flex-1 flex items-start justify-center px-6 pt-16 pb-6 bg-white overflow-hidden"
+  className="w-full flex items-center justify-center px-6 py-9 md:py-14 bg-white"
 >
 
-        <img
-          src="/logo.jpg"
-          alt="bg logo"
-          className="absolute inset-0 m-auto w-[800px] opacity-10 pointer-events-none select-none -z-10"
-        />
+  <div className={`max-w-4xl text-center ${aboutFont.className}`}>
 
-        <div className={`relative z-10 max-w-4xl mx-auto text-center ${aboutFont.className}`}>
+    <h2 className="text-3xl md:text-4xl font-semibold text-[#1f4d3a] mb-6">
+      About Kirubai Masala
+    </h2>
 
-          <h2 className="text-3xl md:text-4xl font-semibold text-red-700 mb-4 mt-6">
-            About Kirubai Masala
-          </h2>
+    <p className="text-black text-base md:text-lg leading-relaxed tracking-wide">
+      Kirubai Masala is rooted in the tradition of authentic Tamil home cooking. 
+      Every spice blend is crafted with carefully selected ingredients and 
+      time-honored recipes that preserve the true taste of homemade food.
+      Our journey began with a simple belief — that food should carry the warmth 
+      of home and the richness of tradition. Each masala is prepared with love, 
+      ensuring purity, freshness, and unmatched flavor. We are committed to delivering 
+      not just spices, but an experience — one that connects generations through 
+      authentic taste and trusted quality.
+    </p>
 
-          <p className="text-black text-lg leading-normal tracking-wide mb-2">
-            Kirubai Masala is rooted in the tradition of authentic Tamil home cooking. 
-            Every spice blend is crafted with carefully selected ingredients and 
-            time-honored recipes that preserve the true taste of homemade food.
-            Our journey began with a simple belief — that food should carry the warmth 
-            of home and the richness of tradition. Each masala is prepared with love, 
-            ensuring purity, freshness, and unmatched flavor.We are committed to delivering not just spices, but an experience — one that 
-            connects generations through authentic taste and trusted quality.
-          </p>
-
-          <p className="text-gray-900 text-base leading-normal tracking-wide mb-">
-            
-          </p>
-
-          <p className="text-black text-base leading-normal tracking-wide mb-2">
-            
-          </p>
-
-        </div>
-      </section>
+  </div>
+</section>
       {/* Footer */}
-<footer className="bg-red-800 text-white px-6 py-8">
+<footer className="bg-[#1f4d3a] text-white px-6 py-8">
 
   <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-6">
 
