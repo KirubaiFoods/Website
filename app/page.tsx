@@ -25,15 +25,23 @@ export default function HomePage() {
     <main className="min-h-screen flex flex-col">
 
       {/* Hero */}
-      <section className="relative w-full min-h-screen flex items-center justify-center overflow-hidden">
-
+      <section className="relative min-h-screen flex items-center justify-center px-4 md:px-0">
   {/* BACKGROUND IMAGE */}
-  <div className="absolute inset-0 flex items-center justify-center -z-10 pointer-events-none">
+  <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-4">
     <img
-      src="/spices-bg.jpg"
-      alt="spices background"
-      className="w-[60%] max-w-[700px] md:max-w-[500px] lg:max-w-[800px] h-auto object-contain opacity-90 animate-zoom-slow"
-    />
+  src="/spices-bg.jpg"
+  alt="Spices"
+  className="
+    w-[60vw] 
+    max-w-[400px] 
+    md:max-w-[650px] 
+    lg:max-w-[800px] 
+    h-auto 
+    object-contain 
+    transition-transform duration-[4000ms] ease-in-out 
+    hover:scale-105
+  "
+/>
   </div>
 
   {/* CONTENT */}
@@ -41,7 +49,7 @@ export default function HomePage() {
 
    <div className="flex flex-col items-center justify-center text-center gap-4">
 
-      <div className="flex items-center gap-3 justify-center">
+      <div className="flex items-center gap-2 justify-center">
         <Flame className="text-[#1f4d3a] w-5 h-5 md:w-6 md:h-6" />
         <span className="text-lg md:text-2xl text-[#1f4d3a]">Real Aroma</span>
       </div>
@@ -106,7 +114,7 @@ export default function HomePage() {
       <h3 className="text-xl font-semibold mb-4">Explore</h3>
       <ul className="space-y-2 text-gray-200 text-sm">
         <li><a href="/contact" className="hover:underline">Contact us</a></li>
-        <li><a href="/privacy" className="hover:underline">Privacy policy</a></li>
+        <li><a href="/privacy-policy" className="hover:underline">Privacy policy</a></li>
         <li><a href="/terms" className="hover:underline">Terms of service</a></li>
         <li><a href="/returns" className="hover:underline">Return & Refund policy</a></li>
         <li><a href="/shipping" className="hover:underline">Shipping policy</a></li>
@@ -127,9 +135,14 @@ export default function HomePage() {
     <Facebook size={18} />
   </a>
 
-  <a href="#" className="w-10 h-10 flex items-center justify-center border border-white rounded-full hover:bg-white hover:text-red-800 transition">
-    <Instagram size={18} />
-  </a>
+  <a
+  href="https://www.instagram.com/kirubaimasala?igsh=MWdlbGpoeTRxaGxubA=="
+  target="_blank"
+  rel="noopener noreferrer"
+  className="w-10 h-10 rounded-full border border-white flex items-center justify-center hover:bg-white hover:text-[#1f4d3a] transition"
+>
+  <Instagram size={18} />
+</a>
 
   <a href="#" className="w-10 h-10 flex items-center justify-center border border-white rounded-full hover:bg-white hover:text-red-800 transition">
     <Youtube size={18} />

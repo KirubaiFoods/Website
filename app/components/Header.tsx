@@ -25,17 +25,19 @@ export default function Header() {
   );
 
   useEffect(() => {
-    const handleScroll = () => {
-      if (window.scrollY > 400) {
-        setShowHeader(false);
-      } else {
-        setShowHeader(true);
-      }
-    };
+  const handleScroll = () => {
+    const firstScreenHeight = window.innerHeight;
 
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+    if (window.scrollY > firstScreenHeight - 100) {
+      setShowHeader(false);
+    } else {
+      setShowHeader(true);
+    }
+  };
+
+  window.addEventListener("scroll", handleScroll);
+  return () => window.removeEventListener("scroll", handleScroll);
+}, []);
   if (isAdminPage) return null;
   return (
     <header
@@ -44,7 +46,7 @@ export default function Header() {
       } ${
         isTransparent
           ? "bg-transparent border-none shadow-none"
-          : "bg-white shadow-md border-b border-gray-100"
+          : "bg-white shadow-md border-none"
       }`}
     >
       <div className="max-w-7xl mx-auto flex justify-between items-center px-4 md:px-6 py-4 md:py-5">

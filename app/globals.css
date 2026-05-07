@@ -56,18 +56,11 @@ img {
   max-width: 100%;
 }
 
-@keyframes zoomSlow {
-  0% {
+@keyframes zoomInOut {
+  0%, 100% {
     transform: scale(1);
   }
   50% {
     transform: scale(1.08);
   }
-  100% {
-    transform: scale(1);
-  }
-}
-
-.animate-zoom-slow {
-  animation: zoomSlow 18s ease-in-out infinite;
 }
