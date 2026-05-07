@@ -46,7 +46,7 @@ export default function Header() {
       } ${
         isTransparent
           ? "bg-transparent border-none shadow-none"
-          : "bg-white shadow-md border-none"
+          : "bg-white shadow-none border-none"
       }`}
     >
       <div className="max-w-7xl mx-auto flex justify-between items-center px-4 md:px-6 py-4 md:py-5">

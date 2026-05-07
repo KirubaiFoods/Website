@@ -1,5 +1,5 @@
 "use client";
-
+import Link from "next/link";
 import { useEffect, useState } from "react";
 
 export default function TrendingPage() {
@@ -11,6 +11,7 @@ const PRODUCTS = [
     img: "/products/chicken65.png",
     preview: "/products/chicken65-preview.png",
     desc: "Spicy and flavorful masala for crispy restaurant-style Chicken 65.",
+    
   },
   {
     id: 1,
@@ -49,21 +50,61 @@ return (
 <div>
 
 {/* HERO */}
-<section className="relative min-h-screen flex flex-col justify-start pt-28 pb-12 bg-white">
+<section className="relative h-[420px] md:h-[520px] overflow-hidden flex items-center justify-center">
 
-  {/* BACKGROUND (LIGHT ONLY) */}
-  <div className="absolute inset-0 -z-10">
-    <img
-      src="/elements/spices-bg.png"
-      className="w-full h-full object-cover opacity-10"
-    />
+  {/* Background Shadow Text */}
+  <div className="absolute inset-0 flex items-center justify-center pointer-events-none select-none">
+    <h2
+      className="
+        text-[90px]
+        sm:text-[140px]
+        md:text-[220px]
+        lg:text-[230px]
+        font-bold
+        uppercase
+        leading-none
+        whitespace-nowrap
+        text-black/[0.03]
+      "
+    >
+      PRODUCTS
+    </h2>
   </div>
 
-  {/* TEXT */}
-  <h1 className="mt-10 text-[40px] sm:text-[60px] md:text-[90px] lg:text-[120px]
-  font-bold text-[#1f4d3a] text-center">
-    TRENDING PRODUCTS
-  </h1>
+  {/* Main Content */}
+  <div className="relative z-10 flex flex-col items-center justify-center text-center px-6 mt-14 md:mt-33">
+    {/* Main Heading */}
+    <h1
+      className="
+        text-4xl
+        sm:text-5xl
+        md:text-6xl
+        lg:text-7xl
+        font-bold
+        uppercase
+        tracking-wide
+        text-[#4a4a4a]
+        leading-none
+      "
+    >
+      Trending Products
+    </h1>
+
+    {/* Subtitle */}
+    <p
+      className="
+        mt-8
+        text-base
+        sm:text-lg
+        md:text-xl
+        text-slate-600
+        whitespace-nowrap
+      "
+    >
+      Authentic homemade spice blends crafted with tradition, purity and rich aroma.
+    </p>
+
+  </div>
 
 </section>
 
@@ -122,6 +163,33 @@ return (
         <p className="text-gray-600 text-lg">
           {activeProduct.desc}
         </p>
+<Link
+  href="/products"
+  className="
+    inline-flex
+    items-center
+    gap-2
+    mt-6
+    text-black
+    uppercase
+    tracking-wide
+    font-semibold
+    text-sm
+    md:text-base
+    group
+    transition-all
+    duration-300
+    hover:translate-x-1
+  "
+>
+  <span className="transition-all duration-300">
+    View All Products
+  </span>
+
+  <span className="text-xl transition-all duration-300 group-hover:translate-x-2">
+    →
+  </span>
+</Link>
 
       </div>
 

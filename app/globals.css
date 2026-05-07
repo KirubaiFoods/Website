@@ -64,3 +64,87 @@ img {
     transform: scale(1.08);
   }
 }
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fadeUp {
+  animation: fadeUp 1s ease forwards;
+}
+
+
+.animate-slowZoom {
+  animation: slowZoom 10s ease-in-out infinite;
+}
+
+/* Particles */
+
+.particle {
+  position: absolute;
+  border-radius: 9999px;
+  opacity: 0.15;
+  animation: floatParticle 8s ease-in-out infinite;
+}
+
+.particle1 {
+  width: 10px;
+  height: 10px;
+  background: #b91c1c;
+  top: 20%;
+  left: 15%;
+}
+
+.particle2 {
+  width: 14px;
+  height: 14px;
+  background: #d97706;
+  top: 60%;
+  left: 25%;
+}
+
+.particle3 {
+  width: 8px;
+  height: 8px;
+  background: #15803d;
+  top: 35%;
+  right: 20%;
+}
+
+.particle4 {
+  width: 12px;
+  height: 12px;
+  background: #92400e;
+  bottom: 20%;
+  right: 15%;
+}
+
+.particle5 {
+  width: 6px;
+  height: 6px;
+  background: #991b1b;
+  top: 75%;
+  left: 50%;
+}
+
+@keyframes floatParticle {
+  0% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-12px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
+}
