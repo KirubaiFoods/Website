@@ -1,28 +1,28 @@
 export default function ReturnsPage() {
   return (
-    <main className="bg-[#f7f5f2] min-h-screen pt-40 pb-20 px-4 md:px-8">
+    <main className="min-h-screen pt-40 pb-20 px-4 md:px-8">
       <div className="max-w-6xl ml-3 md:ml-12 lg:ml-20 mr-3 md:mr-6">
 
         {/* Heading */}
         <div className="mb-12">
-          <h1 className="text-4xl md:text-5xl font-bold text-[#1f1f1f] mb-4">
+          <h1 className="text-4xl md:text-5xl font-bold text-[#1f4d3a] mb-4">
             Return & Refund Policy
           </h1>
 
-          <p className="text-gray-600 text-base md:text-lg">
+          <p className="mb-4">
             Last updated: May 07, 2026
           </p>
         </div>
 
         {/* Content */}
-        <div className="space-y-10 text-[#2d2d2d] leading-8 text-[17px]">
+        <div className="space-y-12 text-[#2d2d2d] leading-8 text-[12px] md:text-lg">
 
           <section>
             <h2 className="text-2xl font-semibold text-[#1f4d3a] mb-4">
               Overview
             </h2>
 
-            <p>
+            <p className="mb-4">
               At Kirubai Masala, we strive to provide the highest quality
               products and customer satisfaction. If you are not fully satisfied
               with your purchase, please review our return and refund policy below.
@@ -34,7 +34,7 @@ export default function ReturnsPage() {
               Eligibility for Returns
             </h2>
 
-            <p>
+            <p className="mb-4">
               Returns are accepted only for damaged, defective, or incorrect
               products received. To be eligible for a return:
             </p>
@@ -55,7 +55,7 @@ export default function ReturnsPage() {
               Non-Returnable Items
             </h2>
 
-            <p>
+            <p className="mb-4">
               Due to the nature of food products, we do not accept returns for:
             </p>
 
@@ -71,12 +71,12 @@ export default function ReturnsPage() {
               Refund Process
             </h2>
 
-            <p>
+            <p className="mb-4">
               Once your return request is approved, refunds will be processed
               to the original payment method within 5–7 business days.
             </p>
 
-            <p className="mt-4">
+            <p className="mb-4">
               In certain cases, we may provide a replacement product instead
               of a refund depending on product availability.
             </p>
@@ -87,7 +87,7 @@ export default function ReturnsPage() {
               Cancellation Policy
             </h2>
 
-            <p>
+            <p className="mb-4">
               Once an order is placed, it cannot be canceled or modified. Please ensure all details are correct before completing your purchase.
             </p>
           </section>
@@ -97,7 +97,7 @@ export default function ReturnsPage() {
               Contact for Returns
             </h2>
 
-            <p>
+            <p className="mb-4">
               For return or refund related enquiries, please contact us:
             </p>
 

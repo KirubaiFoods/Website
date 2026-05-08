@@ -16,18 +16,17 @@ export default function TrackOrderPage() {
   };
 
   return (
-    <main className="bg-[#f7f5f2] min-h-screen pt-40 pb-20 px-4 md:px-8">
+    <main className="min-h-screen pt-40 pb-20 px-4 md:px-8">
       <div className="max-w-6xl ml-3 md:ml-12 lg:ml-20 mr-3 md:mr-6">
 
         {/* Heading */}
         <div className="mb-12">
-          <h1 className="text-3xl md:text-3xl font-bold text-[#1f1f1f] mb-4">
+          <h1 className="text-3xl md:text-5xl font-bold text-[#1f4d3a] mb-4">
             Track Your Order
           </h1>
 
-          <p className="text-gray-600 text-base md:text-lg max-w-3xl">
-            Enter your order ID below to check the current delivery status
-            of your Kirubai Masala order.
+          <p className="mb-4">
+            Enter your order ID below to check the current delivery status.
           </p>
         </div>
 

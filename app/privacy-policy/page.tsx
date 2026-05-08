@@ -1,20 +1,20 @@
 export default function PrivacyPolicyPage() {
   return (
-    <main className="bg-[#f8f6f1] min-h-screen pt-36 pb-20 px-4 md:px-8">
-      <div className="max-w-6xl mx-auto bg-white rounded-[30px] shadow-sm p-6 md:p-14">
+    <main className="min-h-screen pt-36 pb-20 px-4 md:px-8">
+      <div className="max-w-6xl mx-auto bg-white p-6 md:p-14">
 
         {/* Heading */}
         <div className="mb-12">
-  <h1 className="text-4xl md:text-5xl font-bold text-[#1f1f1f] mb-4">
+  <h1 className="text-4xl md:text-5xl font-bold text-[#1f4d3a] mb-4">
     Privacy Policy
   </h1>
 
-  <p className="text-gray-600 text-base md:text-lg">
+  <p className="mb-4">
     Last updated: May 07, 2026 <br />
   </p>
 
 
-          <p className="text-gray-600 text-base md:text-lg">
+          <p className="mb-4">
             At Kirubai Masala, we respect your privacy and are committed
             to protecting the personal information you share with us.
             This Privacy Policy explains how we collect, use, store,

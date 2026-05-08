@@ -2,7 +2,7 @@
 import { useRouter } from "next/navigation";
 import { useState } from "react";
 import { useCart } from "../context/CartContext";
-
+import Image from "next/image";
 export default function ProductsPage() {
   const { addToCart } = useCart();
 
@@ -57,12 +57,137 @@ export default function ProductsPage() {
 
   return (
     <div className="bg-gradient-to-b from-white to-gray-50 min-h-screen">
+      {/* HERO SECTION */}
+<section
+  className="
+    relative
+    w-full
+    mt-[150px]
+    h-[400px]
+    overflow-hidden
+    bg-black
+  "
+>
+  <Image
+    src="/Whole-Spices.png"
+    alt="Spices Background"
+    fill
+    priority
+    quality={100}
+    sizes="100vw"
+    className="
+      object-cover
+      object-center
+      select-none
+    "
+  />
+</section>
 
-      <section className="py-20 px-6 max-w-7xl mx-auto">
-        <h2 className="text-3xl font-bold text-center text-red-700 mb-14">
-          Our Products
-        </h2>
+{/* PRODUCTS HEADING + CATEGORY TABS */}
 
+<section className="relative pt-16 pb-10 px-6 overflow-hidden">
+
+  {/* Shadow Text */}
+  <h2
+    className="
+      absolute
+      top-0
+      left-1/2
+      -translate-x-1/2
+      text-[90px]
+      md:text-[150px]
+      font-extrabold
+      uppercase
+      tracking-tight
+      text-black/[0.04]
+      whitespace-nowrap
+      pointer-events-none
+      select-none
+      leading-none
+    "
+  >
+    Products
+  </h2>
+
+  {/* Main Heading */}
+  <div className="relative z-10 text-center pt-3">
+    <h3
+      className="
+        text-5xl
+        md:text-7xl
+        font-extrabold
+        uppercase
+        tracking-tight
+        text-[#555]
+        leading-none
+      "
+    >
+      Our Products
+    </h3>
+  </div>
+
+  {/* Category Tabs */}
+  <div
+    className="
+      relative
+      z-7
+      mt-12
+      flex
+      flex-wrap
+      justify-center
+      gap-3
+    "
+  >
+    {/* Active Tab */}
+    <button
+      className="
+        px-7
+        py-3
+        bg-[#f59e0b]
+        text-white
+        font-bold
+        text-base
+        shadow-md
+        transition-all
+        duration-300
+      "
+    >
+      All
+    </button>
+
+    {/* Other Tabs */}
+    {[
+      "Pure Spices",
+      "Spice Blends",
+      "Pantry",
+    ].map((item) => (
+      <button
+        key={item}
+        className="
+          px-7
+          py-3
+          bg-white
+          text-black
+          font-bold
+          text-base
+          shadow-md
+          hover:bg-[#f59e0b]
+          hover:text-white
+          transition-all
+          duration-300
+        "
+      >
+        {item}
+      </button>
+    ))}
+  </div>
+
+  {/* Bottom Line */}
+  <div className="mt-13 border-b border-gray-300"></div>
+
+</section>
+      <section className="pt-2 pb-10 px-4 max-w-7xl mx-auto">
+        
         <div className="grid md:grid-cols-4 gap-10">
           {products.map((product) => (
             <ProductCard

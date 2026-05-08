@@ -5,24 +5,24 @@ export default function ShippingPage() {
 
         {/* Heading */}
         <div className="mb-12">
-          <h1 className="text-4xl md:text-5xl font-bold text-[#1f1f1f] mb-4">
+          <h1 className="text-4xl md:text-5xl font-bold text-[#1f4d3a] mb-4">
             Shipping Policy
           </h1>
 
-          <p className="text-gray-600 text-base md:text-lg">
+          <p className="mb-4">
             Last updated: May 07, 2026
           </p>
         </div>
 
         {/* Content */}
-        <div className="space-y-10 text-[#2d2d2d] leading-8 text-[17px]">
+        <div className="space-y-12 text-[#2d2d2d] leading-8 text-[12px] md:text-lg">
 
           <section>
             <h2 className="text-2xl font-semibold text-[#1f4d3a] mb-4">
               Overview
             </h2>
 
-            <p>
+            <p className="mb-4">
               At Kirubai Masala, we are committed to delivering your orders
               safely and on time. This Shipping Policy outlines our shipping
               process, timelines, and delivery charges.
@@ -34,7 +34,7 @@ export default function ShippingPage() {
               Order Processing
             </h2>
 
-            <p>
+            <p className="mb-4">
               Orders are usually processed within 1–2 business days after
               payment confirmation. Orders placed on Sundays or public holidays
               will be processed on the next working day.
@@ -75,7 +75,7 @@ export default function ShippingPage() {
               Order Tracking
             </h2>
 
-            <p>
+            <p className="mb-4">
               Once your order is shipped, tracking details will be shared
               through email, or WhatsApp whenever available.
             </p>
@@ -86,7 +86,7 @@ export default function ShippingPage() {
               Delivery Issues
             </h2>
 
-            <p>
+            <p className="mb-4">
               If your package is delayed, damaged, or not delivered,
               please contact us immediately so we can assist you.
             </p>
@@ -97,7 +97,7 @@ export default function ShippingPage() {
               Incorrect Address
             </h2>
 
-            <p>
+            <p className="mb-4">
               Customers are responsible for providing accurate shipping
               information. Kirubai Masala will not be responsible for delays
               or failed deliveries caused by incorrect addresses or contact details.
@@ -109,7 +109,7 @@ export default function ShippingPage() {
               Contact Information
             </h2>
 
-            <p>
+            <p className="mb-4">
               For shipping-related queries, contact us at:
             </p>
 
