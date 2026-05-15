@@ -19,7 +19,7 @@ const progressPercentage = Math.min(
   100
 );
   return (
-    <div className="min-h-screen bg-gray-50 pt-28 px-6">
+    <div className="min-h-screen bg-gray-50 pt-[150px] md:pt-[170px] px-4 md:px-6">
       {/* 🚚 MARQUEE BANNER */}
   <div className="bg-red-700 text-white py-2 overflow-hidden shadow-sm">
   <div className="marquee text-sm font-medium">

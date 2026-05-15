@@ -200,7 +200,7 @@ export default function CheckoutPage() {
   };
 
   return (
-    <div className="min-h-screen bg-gray-50 pt-28 px-6">
+    <div className="min-h-screen bg-gray-50 pt-[150px] md:pt-[170px] px-4 md:px-6">
       <div className="max-w-7xl mx-auto grid md:grid-cols-3 gap-10">
 
         {/* LEFT */}
