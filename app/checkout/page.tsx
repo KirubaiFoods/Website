@@ -44,8 +44,8 @@ export default function CheckoutPage() {
   const stateValue = form.state?.toLowerCase().trim();
   const isTamilNadu = !stateValue || stateValue === "tamil nadu" || stateValue === "tn";
 
-  const baseShippingCharge = isTamilNadu ? 50 : 100;
-  const shippingCharge = baseShippingCharge;
+  const baseShippingCharge: number = isTamilNadu ? 50 : 100;
+  const shippingCharge: number = baseShippingCharge;
   
   // Calculate exact estimated delivery date range
   const today = new Date();
