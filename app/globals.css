@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&display=swap');
+@import "tailwindcss";
+
+/* ROOT COLORS */
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+/* BASE RESET */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #ffffff; /* ✅ clean white */
+  color: #1f2937;
+  font-family: 'Playfair Display', serif;
+}
+
+/* HIDE NEXT.JS DEV INDICATOR OVERLAY LOGO */
+nextjs-portal,
+[data-next-badge-root],
+div[class*="nextjs"],
+.nextjs-toast-errors-parent {
+  display: none !important;
+}
+
+/* MARQUEE (if used anywhere) */
+@keyframes marquee-scroll {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-100%); }
+}
+
+.marquee {
+  display: inline-block;
+  white-space: nowrap;
+  padding-left: 100%;
+  animation: marquee-scroll 10s linear infinite;
+}
+
+/* INPUT FIX */
+input, label {
+  color: #000;
+}
+
+/* GOOGLE PLACES FIX */
+.pac-container {
+  z-index: 9999 !important;
+}
+
+/* IMAGE SAFETY */
+img {
+  max-width: 100%;
+}
+
+@keyframes zoomInOut {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.08);
+  }
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fadeUp {
+  animation: fadeUp 1s ease forwards;
+}
+
+button, [role="button"], input[type="submit"], input[type="button"] {
+  cursor: pointer;
+}
