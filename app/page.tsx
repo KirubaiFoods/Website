@@ -32,7 +32,9 @@ export default function HomePage() {
   src="/spices-bg.jpg"
   alt="Spices"
   className="
-    w-[60vw] 
+    w-[90vw] 
+    sm:w-[70vw]
+    md:w-[60vw] 
     max-w-[400px] 
     md:max-w-[650px] 
     lg:max-w-[800px] 
@@ -47,7 +49,7 @@ export default function HomePage() {
   {/* CONTENT */}
   <div className="relative z-10 flex flex-col items-center justify-center text-center px-4">
 
-   <div className="flex flex-col items-center justify-center text-center gap-4">
+   <div className="flex flex-col items-center justify-center text-center gap-1 sm:gap-2 md:gap-4 mt-2 sm:mt-0 bg-white/60 sm:bg-transparent backdrop-blur-[2px] sm:backdrop-blur-none p-4 sm:p-0 rounded-3xl sm:rounded-none">
 
       <div className="flex items-center gap-2 justify-center">
         <Flame className="text-[#1f4d3a] w-5 h-5 md:w-6 md:h-6" />
@@ -66,9 +68,9 @@ export default function HomePage() {
 
       <Link
   href="/trending"
-  className="bg-[#1f4d3a] text-white px-8 py-3 rounded-full 
+  className="mt-2 md:mt-4 bg-[#1f4d3a] text-white px-8 py-3 rounded-full 
              transition duration-300 ease-in-out 
-             hover:bg-[#163a2c] hover:bg-red-600 transition hover:scale-105 hover:shadow-lg
+             hover:bg-red-600 hover:scale-105 hover:shadow-lg
              active:scale-95 inline-block"
 >
   Shop Now

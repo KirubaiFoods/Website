@@ -56,10 +56,10 @@ return (
   <div className="absolute inset-0 flex items-center justify-center pointer-events-none select-none">
     <h2
       className="
-        text-[90px]
-        sm:text-[140px]
-        md:text-[220px]
-        lg:text-[230px]
+        text-[55px]
+        sm:text-[90px]
+        md:text-[140px]
+        lg:text-[200px]
         font-bold
         uppercase
         leading-none
@@ -93,12 +93,15 @@ return (
     {/* Subtitle */}
     <p
       className="
-        mt-8
-        text-base
-        sm:text-lg
+        mt-6
+        md:mt-8
+        text-sm
+        sm:text-base
         md:text-xl
         text-slate-600
-        whitespace-nowrap
+        max-w-xl
+        mx-auto
+        px-2
       "
     >
       Authentic homemade spice blends crafted with tradition, purity and rich aroma.
@@ -134,7 +137,7 @@ return (
 
             <img
               src={p.img}
-              className="w-[75%] h-[75%] object-contain"
+              className="w-[90%] h-[90%] object-contain rounded-full"
             />
           </div>
 
